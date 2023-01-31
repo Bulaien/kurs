@@ -1,138 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  background-color: grey;
-}
-/* ===============HEADER=============== */
-.header {
-  height: 10vh;
-  width: 100%;
-  background-color: grey;
-  overflow: hidden;
-  border-bottom: 1px solid red;
-}
-
-.logo {
-  float: left;
-  height: 100%;
-}
-
-.logo img {
-  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  
+  
 }
 
 .navigation {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  background-color: rgb(255, 255, 255);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  width: 30vw;
   height: 100%;
+  font-family: Roboto;
+  font-size: 2.5rem;
+  font-weight: 900;
+  padding-left: 1rem;
 }
 
-.logo p {
-  color: white;
-  font-size: 3.5rem;
-  margin-left: 1rem;
+ul {
+  width: 40vw;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.navigation ul li {
-  float: right;
-  margin: 2.5vh;
+ul li {
   list-style: none;
 }
 
-a {
+ul li a {
+  font-size: 1.5rem;
   text-decoration: none;
-  color: rgb(189, 186, 186);
-  font-size: 4vh;
-  transition: 500ms;
-  padding: 3vh;
-}
-a:hover {
-  color: whitesmoke;
+  color: grey;
 }
 
-/* ===============MAIN=============== */
-.main {
-  height: 79.5vh;
-  background-image: url(wand.jpg);
+.container {
+  display: flex;
+  justify-content: space-around;
+  
+  background-color: rgb(255, 255, 255);
+}
+.card {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+  width: 30%;
+  background-color: aliceblue;
+  box-shadow: 4px 4px 8px black;
 }
 
-.main h1,
-h2 {
+.top {
+  background-image: url("img/flux.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+ height: 50vh;
+  background-color: rgb(255, 255, 255);
+}
+
+.desc {
+  
+  background-color: rgb(255, 255, 255);
+  word-break: break-all;
+  padding: 1.2rem;
+}
+.desc h2 {
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
-  color: rgb(87, 75, 75);
-  margin-bottom: 2rem;
+  margin-top: 0.5rem;
 }
 
-.main h1 {
-  padding: 10px 10px;
-  font-size: 3rem;
-  text-decoration: overline underline;
+
+
+@keyframes color {
+  0% {
+    color: rgb(174, 174, 184);
+  }
+
+  20% {
+    color: rgb(96, 96, 100);
+  }
+
+  40% {
+    color: rgb(47, 47, 63);
+  }
+
+  60% {
+    color: rgb(47, 47, 63);
+  }
+
+  80% {
+    color: rgb(96, 96, 100);
+  }
+
+  100% {
+    color: rgb(174, 174, 184);
+  }
 }
 
-.main p {
-  padding: 0 2rem 1rem 2rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: rgb(87, 75, 75);
-}
-.dick {
-    font-weight: 900;
-    text-decoration: underline;
-    text-align: center;
+#kompensator {
+  animation: color 1s;
+  animation-iteration-count: infinite;
 }
 
-.main span {
-  font-style: italic;
+@media (max-width: 1000px) {
+
+    .container {
+     
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+
+    
 }
 
-.wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.main-left {
-  background-image: url(essen.jpg);
-  background-repeat: no-repeat;
-  width: 25vw;
-  height: 79.5vh;
-  object-fit: cover;
-}
-
-.main-middle {
-    width: 70vw;
-    height: 80vh;
-    overflow: auto;
-}
-
-.main-right {
-  background-image: url(essen2.jpg);
-  background-repeat: no-repeat;
-  width: 25vw;
-  height: 79.5vh;
-  object-fit: cover;
-}
-/* ===============FOOTER=============== */
-.footer {
-  height: 10%;
-  background-color: grey;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid red;
-}
-
-.footer-right {
-  margin: 0 2rem;
-}
-
-.footer-left {
-  margin: 0 2rem;
-}
-
-.footer p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2vh;
-  color: darkgrey;
-}
